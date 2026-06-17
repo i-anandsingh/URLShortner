@@ -22,6 +22,7 @@ public class UrlShortnerController {
     private ResponseEntity<String> encodeUrl(
             @RequestBody String var
     ) {
-        return new ResponseEntity<>("String", HttpStatus.CREATED);
+        String enocdedUrl = iEncoder.encode(var);
+        return new ResponseEntity<>(enocdedUrl, HttpStatus.CREATED);
     }
 }

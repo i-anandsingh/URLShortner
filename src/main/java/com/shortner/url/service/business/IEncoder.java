@@ -5,7 +5,5 @@ import org.springframework.stereotype.Service;
 @Service
 public interface IEncoder {
 
-    public String encode (String url) {
-        return "";
-    }
+    public String encode (String url);
 }
