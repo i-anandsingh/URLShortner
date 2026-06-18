@@ -4,5 +4,5 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface IDecoder {
-    public String decoder(Long encodedUrl);
+    public String decoder(String encodedUrl);
 }

@@ -31,7 +31,7 @@ public class UrlShortnerController {
 
     @GetMapping("/decode")
     private ResponseEntity<String> decoder(
-            @RequestBody Long encodedUrl
+            @RequestBody String encodedUrl
     ) {
         String originalUrl = iDecoder.decoder(encodedUrl);
         return new ResponseEntity<>(originalUrl, HttpStatus.OK);
