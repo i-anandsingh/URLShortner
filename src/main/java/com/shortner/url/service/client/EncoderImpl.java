@@ -18,14 +18,14 @@ public class EncoderImpl implements IEncoder {
     }
 
     @Override
-    public String encode(String url) {
-        Optional<UrlEntity> existing = urlShortnerRepository.findByOriginalUrl(url);
+    public String encode(String originalUrl) {
+        Optional<UrlEntity> existing = urlShortnerRepository.findByOriginalUrl(originalUrl);
         if (existing.isPresent()) {
             return existing.get().getEncodedUrl();
         }
 
         UrlEntity entity = new UrlEntity();
-        entity.setOriginalUrl(url);
+        entity.setOriginalUrl(originalUrl);
         entity.setEncodedUrl(""); // placeholder, encoded_url is NOT NULL
         UrlEntity saved = urlShortnerRepository.save(entity);
 

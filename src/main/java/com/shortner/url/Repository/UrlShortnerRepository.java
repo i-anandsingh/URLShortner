@@ -10,4 +10,5 @@ import java.util.UUID;
 @Repository
 public interface UrlShortnerRepository extends JpaRepository <UrlEntity, Long> {
     Optional<UrlEntity> findByOriginalUrl(String originalUrl);
+    Optional<UrlEntity> findByEncodedUrl(Long encodedUrl);
 }
