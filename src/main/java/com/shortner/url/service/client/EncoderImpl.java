@@ -5,10 +5,11 @@ import com.shortner.url.Repository.UrlShortnerRepository;
 import com.shortner.url.service.business.IEncoder;
 import com.shortner.url.utility.Base62;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-@Component
+@Service
 public class EncoderImpl implements IEncoder {
 
     private final UrlShortnerRepository urlShortnerRepository;

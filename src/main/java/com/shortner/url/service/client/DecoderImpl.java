@@ -4,11 +4,11 @@ import com.shortner.url.Entity.UrlEntity;
 import com.shortner.url.Repository.UrlShortnerRepository;
 import com.shortner.url.service.business.IDecoder;
 import com.shortner.url.utility.Base62;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-@Component
+@Service
 public class DecoderImpl implements IDecoder {
 
     private final UrlShortnerRepository urlShortnerRepository;
