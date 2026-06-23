@@ -35,7 +35,8 @@ public class EncodeImplTest {
                 .thenReturn(Optional.of(existing));
 
         String result = encoderImpl.encode(url);
-
+        assertEquals("1B", result);
+        verify(urlShortnerRepository, never()).save(any());
     }
 
     @Test
